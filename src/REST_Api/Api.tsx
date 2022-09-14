@@ -4,8 +4,19 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import axios from 'axios'
 
+interface IsState {
+    userData: any[], 
+    open: boolean,
+    editOpen: boolean, 
+    name: string, 
+    editName: string,
+    email: string, 
+    editEmail: string, 
+    editObj: string
+}
+
 export class Api extends Component {
-    state = {
+    state:IsState = {
         userData: [],
         open: false,
         editOpen: false,
